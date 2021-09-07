@@ -56,6 +56,7 @@ namespace L2_Algorithms_DataStructures
             // our data structures
             int[] numbersSearchArray = new int[numbersToCheck];
             Dictionary<int, int> numbersSearchDictionary = new Dictionary<int, int>();
+            Debug.WriteLine("Populating data ...");
 
             // populate data
             for (int i = 0; i < numbersToCheck; i++)
@@ -66,6 +67,7 @@ namespace L2_Algorithms_DataStructures
             }
 
             Debug.WriteLine("Elements in the dictionary = " + numbersSearchDictionary.Count());
+            Debug.WriteLine("Starting search");
 
             // now, time the searches
             Stopwatch watch = System.Diagnostics.Stopwatch.StartNew();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 // Comment 2 to demo on Github
 // Hello from Manish
@@ -16,16 +17,16 @@ namespace L2_Algorithms_DataStructures
             ExampleArray[0] = 0;
             ExampleArray[1] = 1;
 
-            Console.WriteLine(ExampleArray[0]);
-            Console.WriteLine(ExampleArray[1]);
-            Console.WriteLine(ExampleArray[2]); // what to expect here?
+            Debug.WriteLine(ExampleArray[0]);
+            Debug.WriteLine(ExampleArray[1]);
+            Debug.WriteLine(ExampleArray[2]); // what to expect here?
 
             //Alternate forms of initialization
             string[] weekDays1 = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
             string[] weekDays2 = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
             // Exercise: print the element with content "Thu"
-            Console.WriteLine(weekDays2[4]);
+            Debug.WriteLine(weekDays2[4]);
 
             // multi-diemnsional arrays
             // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays
@@ -33,12 +34,12 @@ namespace L2_Algorithms_DataStructures
             int[,] Array2D = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
 
             // What will this print?
-            Console.WriteLine(Array2D[3, 1]);
+            Debug.WriteLine(Array2D[3, 1]);
 
-            // Exercise: Create a 2D array of strings - 4 rows and 3 columns
+            // Exercise 1: Create a 2D array of strings - 4 rows and 3 columns
             // each row to contain related colors (e.g. "red", "orange", "brown")
 
-            // Exercise: Print each row
+            // Exercise 2: Print each row
 
 
             // Hash tables/ Dictionaries
@@ -54,21 +55,29 @@ namespace L2_Algorithms_DataStructures
             openWith.Add("rtf", "wordpad.exe");
 
             // Why do get an error below? 
-            //openWith.Add("rtf", "word.exe");
+            // openWith.Add("rtf", "word.exe");
 
             // How can we fix the error?
 
 
 
             // The key is used to index values 
-            Console.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
+            Debug.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
 
             // The values associated with a key can be changed
             openWith["rtf"] = "winword.exe";
-            Console.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
+            Debug.WriteLine("For key = \"rtf\", value = {0}.", openWith["rtf"]);
 
             // Delete item at key
             openWith.Remove("doc");
+
+            // Exercise 3: Create a new dictionary called CourseEnrollments
+            // Use strings as the key type and int as the value type
+            // Populate the dictionary with 3 course names (e.g. 'ISM 6225') as keys,
+            //  and the corresponding enrollments as values.
+            // Print the enrollments for one of the courses
+            // Check if the dictionary has enrollments information for a course
+            // Replace information about a course with information for another course
 
             DataStructuresIntroduction.ComplexityDemo();
         }
