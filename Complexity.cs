@@ -49,7 +49,7 @@ namespace L2_Algorithms_DataStructures
             //  and compare search times
 
             // initialize
-            int numbersToCheck = 100000;
+            int numbersToCheck = 10000;
             Random random = new Random();
             int n;
 
